@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Beige palette - soft warm neutrals */
+  --color-beige-50: #FAFAF7;
+  --color-beige-100: #F5F0E8;
+  --color-beige-200: #EDE5D6;
+  --color-beige-300: #DDD3BF;
+
+  /* Sage palette - muted greens */
+  --color-sage-50: #EDF5ED;
+  --color-sage-100: #D4E6D4;
+  --color-sage-200: #B3CEB3;
+  --color-sage-300: #8DB48D;
+  --color-sage-400: #6B9E6B;
+  --color-sage-500: #4D7C52;
+  --color-sage-600: #3A6040;
+
+  /* Sky palette - calm blues */
+  --color-sky-50: #EBF4FA;
+  --color-sky-100: #D6E8F5;
+  --color-sky-200: #B8D5E8;
+  --color-sky-300: #8BBDD8;
+  --color-sky-400: #5FA0C5;
+  --color-sky-500: #3D85AE;
+
+  /* Coral - warm accent */
+  --color-coral-100: #FAE8E3;
+  --color-coral-300: #F0A090;
+  --color-coral-500: #D96B5B;
+
+  /* Amber - highlight */
+  --color-amber-100: #FEF3C7;
+  --color-amber-400: #F59E0B;
+  --color-amber-500: #D97706;
+
+  /* Font */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --background: #FAFAF7;
+  --foreground: #1A1A2E;
+  --nav-height: 72px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default focus outline, add custom */
+:focus-visible {
+  outline: 2px solid #6B9E6B;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDD3BF;
+  border-radius: 2px;
+}
+
+/* Safe area for mobile nav */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
